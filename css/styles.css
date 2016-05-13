@@ -11,7 +11,7 @@ body{
 	padding: 0;
 	/* background-color: #484043; */
 	background-color: #6699ff;
-	text-align: center;
+	/*text-align: center; */
 	background-repeat: repeat-y;
 	background-size: 100%;
 	margin-top: 5%;
@@ -27,7 +27,7 @@ h1{
 	background-color: #000066;
 	text-align: center;
 	font-size: 2.75em;
-	padding-top:60px;
+	padding-top:6px;
 	color: white;
 }
 
@@ -39,13 +39,26 @@ ul{
 
 li{
 	margin: 0;
-	padding: 0;
+	padding: 20px;
 	font-family: GoodDog;
 	height: 34px;
 	line-height: 64px;
-
 }
-span{
+	
+a {
+    color: #ff6666;
+}
+
+a:hover {
+    color: #000066 ;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+a{
 	height: 64px;
 	line-height: 64px;
 	font-size: 20px;
@@ -54,14 +67,10 @@ span{
 }
 
 
-span:hover{
-color: #ff6666;
-}
-
-
 img{
 	vertical-align: middle;
-	padding-right:40;
+	padding-right:30;
+	border-radius: 50%;
 }
 
 
@@ -72,22 +81,26 @@ img{
 }
 
 #leftSide{
-	width: 66px;
+	width: 10%;
 	border-radius: 0px 30px 30px 0px;
 
-	background-color: ##ff6666
-;
-	margin: 0;
+	background-color: white;
+	margin-top: 2%;
+	display: inline-block;
+	float: left;
+
 }
 
 #rightSide{
-	width: 92%;
-	background-color: ##ff6666
-;
+	width: 90%;
+	background-color: ##ff6666;
+	display: inline-block;
+	float: left;
+
 }
 
 #icon1{
-	list-style-image: url('picturess/icon1.png');
+	list-style-image: url('images/icon1.png');
 }
 
 .shiftLeft{
@@ -95,5 +108,28 @@ img{
 }
 
 .shiftRight{
-	width: 59%;
+	width: 60%;
+}
+
+
+.pictureContainer{
+	font-family: GoodDog;
+	font-size: 20px;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+	margin: 5%;
+	padding:5px;
+	image-align: center;
+	text-align: center;
+	vertical-align: middle;
+	width: 500px;
+	height: 500px;
+	line-height: 400px;
+	margin-left: 0;
+	margin-right: 30%;
+	float: right;
+	display: inline-block;
+
+	
 }
