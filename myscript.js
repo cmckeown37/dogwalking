@@ -1,3 +1,37 @@
+
+var headerText = "Dog Pampering Extraordinares";
+var theQuote = new Array("'Erin was so helpful when we left our dog home for a week. We came back and Teddy seemed so happy and cared for!'", 
+	"'Angelina gave Bear the best bath and made him look his best!'", 
+	"'Joan is so friendly and everytime she comes over to walk our dog she is so excited to see Joan!'");
+
+var picName = new Array('images/p1.jpg','images/p2.jpg','images/p3.jpg');
+var wordCounter = -1;
+var numberOfPictures = 4;
+var myVar;
+var rndNum;
+var thePic;
+var whichPic = 0;
+var picArrayLength;
+
+
+function setDeceleratingTimeout( callback, factor, times )
+{
+  var internalCallback = function( t, counter )
+  {
+    return function()
+    {
+      if ( --t > 0 )
+      {
+        window.setTimeout( internalCallback, ++counter * factor );
+        callback();
+      }
+    }
+  }( times, 0 );
+
+  window.setTimeout( internalCallback, factor );
+};
+
+
 $(document).ready(function(){
 	
 	$('a').css ('display', 'none');
@@ -36,21 +70,27 @@ $(document).ready(function(){
 
 });
 
-var headerText = "Dog Pampering Extraordinares";
-var poem = new Array("'Erin was so helpful when we left our dog home for a week. We came back and Teddy seemed so happy and cared for!'");
-var wordCounter = -1;
-var numberOfPictures = 2;
-var myVar;
 
 function setPicture(){
 
-	var rndNum = Math.floor(Math.random()*numberOfPictures);
-	var picName = "images/pic" + rndNum + ".jpg"
+	//= Math.floor(Math.random()*numberOfPictures);
 
-	$('.pictureContainer').css("background-image", ("url(" + picName +")") );
+	thePic = picName[whichPic];
 
+
+	$('.pictureContainer').css("background-image", ("url(" + thePic +")") );
+	$('#quoteContainer').html(theQuote[whichPic]);
+
+	whichPic++;
+
+	if(whichPic > picArrayLength -1){
+		whichPic = 0;
+	}
+
+
+/*
 	if(wordCounter >= 0){
-		if(wordCounter == 12){
+		if(wordCounter == 4){
 			$('.pictureContainer').css("font-size", "20px" );
 		} else {
 			$('.pictureContainer').css("font-size", "20px" );
@@ -64,9 +104,10 @@ function setPicture(){
 		wordCounter = -1;
 	
 	}
-
+*/
 
 }
+
 
 $(document).ready(function(){
 	$('h1').html(headerText);
@@ -79,7 +120,16 @@ $(document).ready(function(){
      
 	});  
 
-	myVar = setInterval(setPicture, 1500);
+	
+ 
+  	picArrayLength = picName.length;
 
+	//myVar = setInterval(setPicture, 1500);
+
+   
+    setPicture();
+    setDeceleratingTimeout( function(){ console.log( 'hi' );}, 10000, 10 );
+
+   myVar = setInterval(setPicture, 1500);
 
 });
