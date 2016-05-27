@@ -1,0 +1,108 @@
+@font-face{
+	font-family: GoodDog;
+	src: url(../fonts/GoodDog/GoodDog.otf);
+
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	/* background-color: #484043; */
+	background-color: #6699ff;
+	/*text-align: center; */
+	background-repeat: repeat-y;
+	background-size: 100%;
+	margin-top: 5%;
+	margin-bottom: 0%;
+	height: 1000px;
+}
+
+h1{
+ 	font-family: GoodDog;
+	margin:0;
+	background-color:#6699ff;
+	text-align: center;
+	font-size: 2.75em;
+	padding-top:6px;
+	color: #000066;
+}
+
+
+.other{
+	/* vertical-align: middle; */
+	/* padding-right:30; */
+	/*border-radius: 0; */
+	/*width= 100%;*/
+	width:100%;
+}
+
+.cost{
+
+	text-align: left;
+}
+
+p{
+
+font-family: GoodDog;
+color:#000066;
+font-size: 3em;
+margin-left: 25%;
+width: 50%;
+text-align: center;
+
+
+}
+
+ul{
+font-family: GoodDog;
+color:#000066;
+font-size: 3em;
+margin-left: 25%;
+width: 50%;
+text-align: center;
+list-style-type: none;
+
+}
+
+
+.pink{
+
+	color: #ff6666;
+	font-size: 2em;
+	padding-top: 1%;
+
+}
+
+.myLinks{
+
+color: #ff6666;
+text-decoration: none;
+
+}
+
+a:hover{
+	color: #000066;
+
+}
+.topPic{
+
+vertical-align: middle;
+	padding-right:30;
+	border-radius: 50%
+
+}
+
+
+.floatable{
+
+	float: left;
+}
+
+.employeePeople{
+	vertical-align: middle;
+
+	width: 31%;
+	height: 75px;
+	margin-bottom: 25px
+}
+
